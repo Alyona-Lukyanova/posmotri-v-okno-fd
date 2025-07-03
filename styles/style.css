@@ -47,7 +47,7 @@ ol {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -58,7 +58,7 @@ ol {
   grid-template-areas: "result content__details";
   grid-template-columns: repeat(2, 1fr);
   align-items: end;
-  height: 534px;
+  height: auto;
   gap: 30px;
 }
 
@@ -76,8 +76,7 @@ ol {
   position: relative;
   height: 298px;
   padding: 2px;
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 .content__details {
@@ -95,7 +94,7 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .content__list {
@@ -111,7 +110,7 @@ ol {
 .content__video-card-thumbnail {
   height: 103px;
   width: 194px;
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -126,7 +125,7 @@ ol {
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", "Franklin Gothic Bold", "Arial Black", sans-serif;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 75px;
@@ -144,7 +143,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", "Franklin Gothic Bold", "Arial Black", sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
@@ -158,7 +157,12 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden; 
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -202,8 +206,8 @@ ol {
   border-right: none;
   color: #fff;
   font-size: 18px;
-  font-family: "Fira Sans Condensed";
-  background-color: #1d1919;
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  background-color: transparent;
   appearance: none;
   outline: none;
   width: 225px;
@@ -235,10 +239,12 @@ ol {
 
 .button {
   align-self: flex-end;
+  border: none;
+  padding: 0;
   outline: 1px solid #ffffff;
   background-color: transparent;
   font-size: 18px;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #fff;
@@ -272,11 +278,11 @@ button:active {
   background-color: #1b1919;
 }
 
-.content__card-link_current:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__card-link_current:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
